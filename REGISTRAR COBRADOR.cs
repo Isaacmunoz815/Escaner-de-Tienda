@@ -45,17 +45,37 @@ namespace Escaner_de_Tienda
                 else
                 {
                     Home home = new Home();
-                    string database = "server=localhost;user=root;database=escanerTienda;port=3306;password=Ferrari1";
+                    string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                     MySqlConnection login = new MySqlConnection(database);
                     MySqlConnection registrar = new MySqlConnection(database);
                     try
                     {
                         login.Open();
                         registrar.Open();
-                        string sqlregistrar = "INSERT INTO `escanertienda`.`cobrador` (`nombre_cobrador`, `mail`, `telefono`, `birthdate`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
-                        MySqlCommand registro = new MySqlCommand(sqlregistrar, registrar);
-                        registro.ExecuteNonQuery();
-                        MessageBox.Show("COBRADOR REGISTRADO");
+                        string sqlregistrar = "INSERT INTO cobrador (`nombre_cobrador`, `mail`, `telefono`, `birthdate`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
+                        string sqlregistrar1 = "INSERT INTO login (`nombre_cobrador`, `mail`, `password`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox5.Text + "')";
+                        string checkduplicated = "SELECT * From cobrador WHERE mail = '" + textBox2.Text + "';";
+                        MySqlCommand checkduplicated1 = new MySqlCommand(checkduplicated, registrar);
+                        MySqlDataReader read = checkduplicated1.ExecuteReader();
+                        if(read.HasRows)
+                        {
+                            MessageBox.Show("YA EXISTE UN COBRADOR CON ESE CORREO");
+                            textBox1.Text = "";
+                            textBox2.Text = ""; 
+                            textBox3.Text = "";
+                            textBox4.Text = "";
+                            read.Close();
+
+                        }
+                        else
+                        {
+                            read.Close();
+                            MySqlCommand registro = new MySqlCommand(sqlregistrar, registrar);
+                            MySqlCommand registro1 = new MySqlCommand(sqlregistrar1, registrar);
+                            registro.ExecuteNonQuery();
+                            registro1.ExecuteNonQuery();
+                            MessageBox.Show("COBRADOR REGISTRADO");
+                        }
                         registrar.Close();
                         login.Close();
 

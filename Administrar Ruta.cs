@@ -26,26 +26,28 @@ namespace Escaner_de_Tienda
 
             if (textBox1.Text == "")
             {
-                MessageBox.Show("ESCRIBE EL ID DE RUTA");
+                MessageBox.Show("ESCRIBE EL COLOR DE RUTA");
             }
             else
             {
-                string database = "server=localhost;user=root;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
                     managment.Open();
-                    string sql = "UPDATE `escanertienda`.`ruta` SET `nombre_cobrador` = '" + contraseña + "' WHERE(`id_ruta` = '" + correo + "')";
+                    string sql = "UPDATE ruta SET `nombre_cobrador` = '" + contraseña + "' WHERE(`color_ruta` = '" + correo + "')";
                     MySqlCommand comandologin = new MySqlCommand(sql, managment);
                     comandologin.ExecuteNonQuery();
+                    MessageBox.Show("RUTA ACTUALIZADA");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    button1.Enabled = false;
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("NO SE PUDO CAMBIAR EL COBRADOR, NO EXISTE");
                 }
                 managment.Close();
-                textBox1.Text = "";
-                textBox2.Text = "";
 
             }
         }
@@ -62,16 +64,16 @@ namespace Escaner_de_Tienda
 
             if (textBox1.Text == "")
             {
-                MessageBox.Show("ESCRIBE EL ID DE RUTA");
+                MessageBox.Show("ESCRIBE EL COLOR DE RUTA");
             }
             else
             {
-                string database = "server=localhost;user=root;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
                     managment.Open();
-                    string sql = "SELECT * FROM `escanerTienda`.`ruta` WHERE id_ruta= '" + correo + "';";
+                    string sql = "SELECT * FROM ruta WHERE color_ruta= '" + correo + "';";
                     MySqlCommand comandologin = new MySqlCommand(sql, managment);
                     MySqlDataReader lectura = comandologin.ExecuteReader();
                     if (lectura.HasRows)
@@ -80,6 +82,7 @@ namespace Escaner_de_Tienda
                         {
                             textBox2.Text = lectura.GetString(1);
                         }
+                        button1.Enabled = true;
 
                     }
                     else

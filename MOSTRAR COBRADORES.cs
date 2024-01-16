@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Escaner_de_Tienda
 {
-    public partial class MOSTRAR_RUTAS : Form
+    public partial class MOSTRAR_COBRADORES : Form
     {
-        public MOSTRAR_RUTAS()
+        public MOSTRAR_COBRADORES()
         {
             InitializeComponent();
             string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
@@ -23,7 +23,7 @@ namespace Escaner_de_Tienda
             {
                 home.Open();
 
-                string sql = "SELECT * FROM ruta ORDER BY color_ruta;";
+                string sql = "SELECT * FROM cobrador ORDER BY id_cobrador;";
                 MySqlCommand cmd = new MySqlCommand(sql, home);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
@@ -51,11 +51,6 @@ namespace Escaner_de_Tienda
             }
 
             home.Close();
-        }
-
-        private void MOSTRAR_RUTAS_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

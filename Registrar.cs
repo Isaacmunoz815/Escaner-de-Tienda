@@ -55,7 +55,7 @@ namespace Escaner_de_Tienda
                 else
                 {
                     Home home = new Home();
-                    string database = "server=localhost;user=root;database=escanerTienda;port=3306;password=Ferrari1";
+                    string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                     MySqlConnection login = new MySqlConnection(database);
                     MySqlConnection registrar = new MySqlConnection(database);
                     try
@@ -76,7 +76,7 @@ namespace Escaner_de_Tienda
                         {
                             lectura.Close();
                             registrar.Open();
-                            string sqlregistrar = "INSERT INTO `escanertienda`.`usuarios` (`NOMBRES`, `APELLIDOS`, `MAIL`, `PASSWORD`, `BIRTHDATE`) VALUES('" + nombres + "', '" + apellidos + "', '" + correo + "', '" + contrasena + "', '" + birthdate + "');";
+                            string sqlregistrar = "INSERT INTO usuarios (NOMBRES, APELLIDOS, MAIL, PASSWORD, BIRTHDATE) VALUES('" + nombres + "', '" + apellidos + "', '" + correo + "', '" + contrasena + "', '" + birthdate + "');";
                             MySqlCommand registro = new MySqlCommand(sqlregistrar, registrar);
                             registro.ExecuteNonQuery();
                             MessageBox.Show("USUARIO REGISTRADO");

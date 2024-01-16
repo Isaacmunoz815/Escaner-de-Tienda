@@ -61,6 +61,7 @@
             // 
             // button1
             // 
+            button1.Enabled = false;
             button1.Location = new Point(454, 346);
             button1.Name = "button1";
             button1.Size = new Size(227, 73);
@@ -71,9 +72,9 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(211, 177);
+            textBox1.Location = new Point(254, 175);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(579, 39);
+            textBox1.Size = new Size(528, 39);
             textBox1.TabIndex = 5;
             // 
             // textBox2
@@ -89,9 +90,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(44, 173);
             label2.Name = "label2";
-            label2.Size = new Size(136, 32);
+            label2.Size = new Size(187, 32);
             label2.TabIndex = 7;
-            label2.Text = "ID DE RUTA";
+            label2.Text = "COLOR DE RUTA";
             // 
             // label3
             // 

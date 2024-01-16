@@ -35,7 +35,6 @@
             textBox2 = new TextBox();
             button1 = new Button();
             panel1 = new Panel();
-            linkLabel1 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -104,20 +103,10 @@
             panel1.Size = new Size(912, 118);
             panel1.TabIndex = 6;
             // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(154, 381);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(257, 32);
-            linkLabel1.TabIndex = 7;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "olvidaste la contraseña";
-            // 
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(461, 384);
+            linkLabel2.Location = new Point(311, 384);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(320, 32);
             linkLabel2.TabIndex = 8;
@@ -131,7 +120,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 450);
             Controls.Add(linkLabel2);
-            Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -156,7 +144,6 @@
         private TextBox textBox2;
         private Button button1;
         private Panel panel1;
-        private LinkLabel linkLabel1;
         private LinkLabel linkLabel2;
     }
 }
