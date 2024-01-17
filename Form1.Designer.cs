@@ -128,6 +128,8 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
             Text = "Iniciar Sesion";
             Load += Form1_Load;

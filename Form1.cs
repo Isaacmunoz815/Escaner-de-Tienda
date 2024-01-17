@@ -16,7 +16,7 @@ namespace Escaner_de_Tienda
 
             if (textBox1.Text == "" && textBox2.Text == "")
             {
-                MessageBox.Show("RELLENA TODOS LOS CAMPOS, PLEASE");
+                MessageBox.Show("RELLENA TODOS LOS CAMPOS POR FAVOR");
             }
             else
             {

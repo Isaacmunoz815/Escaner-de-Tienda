@@ -3,18 +3,39 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escaner de Tienda", "Escaner de Tienda.csproj", "{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escaner de Tienda", "Escaner de Tienda.csproj", "{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Escaner Tienda|Any CPU = Escaner Tienda|Any CPU
+		Escaner Tienda|ARM64 = Escaner Tienda|ARM64
+		Escaner Tienda|x64 = Escaner Tienda|x64
 		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|ARM64.Build.0 = Debug|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|x64.ActiveCfg = Debug|x64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Debug|x64.Build.0 = Debug|x64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|Any CPU.Build.0 = Debug|Any CPU
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|ARM64.ActiveCfg = Escaner Tienda|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|ARM64.Build.0 = Escaner Tienda|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|x64.ActiveCfg = Escaner Tienda|x64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Escaner Tienda|x64.Build.0 = Escaner Tienda|x64
 		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|ARM64.ActiveCfg = Release|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|ARM64.Build.0 = Release|ARM64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|x64.ActiveCfg = Release|x64
+		{8E4D18EA-D022-4A4D-8868-5E35FD4101E6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
