@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             label1 = new Label();
             panel1 = new Panel();
             button12 = new Button();
             dataGridView1 = new DataGridView();
+            VENDEDOR = new DataGridViewTextBoxColumn();
+            TELEFONO = new DataGridViewTextBoxColumn();
+            DOMICILIO = new DataGridViewTextBoxColumn();
+            ESTATUS = new DataGridViewTextBoxColumn();
+            IDTIENDA = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            COLORRUTA = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
             button3 = new Button();
             button2 = new Button();
@@ -47,15 +57,6 @@
             button8 = new Button();
             button9 = new Button();
             saveFileDialog1 = new SaveFileDialog();
-            VENDEDOR = new DataGridViewTextBoxColumn();
-            TELEFONO = new DataGridViewTextBoxColumn();
-            DOMICILIO = new DataGridViewTextBoxColumn();
-            ESTATUS = new DataGridViewTextBoxColumn();
-            IDTIENDA = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            COLORRUTA = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
@@ -117,6 +118,60 @@
             dataGridView1.Size = new Size(1792, 800);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // VENDEDOR
+            // 
+            VENDEDOR.HeaderText = "VENDEDOR";
+            VENDEDOR.MinimumWidth = 10;
+            VENDEDOR.Name = "VENDEDOR";
+            // 
+            // TELEFONO
+            // 
+            TELEFONO.HeaderText = "TELEFONO DE LA TIENDA";
+            TELEFONO.MinimumWidth = 10;
+            TELEFONO.Name = "TELEFONO";
+            // 
+            // DOMICILIO
+            // 
+            DOMICILIO.HeaderText = "DOMICILIO";
+            DOMICILIO.MinimumWidth = 10;
+            DOMICILIO.Name = "DOMICILIO";
+            // 
+            // ESTATUS
+            // 
+            ESTATUS.HeaderText = "ESTATUS DE COBRO";
+            ESTATUS.MinimumWidth = 10;
+            ESTATUS.Name = "ESTATUS";
+            // 
+            // IDTIENDA
+            // 
+            IDTIENDA.HeaderText = "ID DE TIENDA";
+            IDTIENDA.MinimumWidth = 10;
+            IDTIENDA.Name = "IDTIENDA";
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "MONTO DE COBRO";
+            Column1.MinimumWidth = 10;
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "DESCRIPCION";
+            Column2.MinimumWidth = 10;
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "NOTAS";
+            Column3.MinimumWidth = 10;
+            Column3.Name = "Column3";
+            // 
+            // COLORRUTA
+            // 
+            COLORRUTA.HeaderText = "COLOR DE RUTA";
+            COLORRUTA.MinimumWidth = 10;
+            COLORRUTA.Name = "COLORRUTA";
             // 
             // groupBox1
             // 
@@ -294,60 +349,6 @@
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
             // 
-            // VENDEDOR
-            // 
-            VENDEDOR.HeaderText = "VENDEDOR";
-            VENDEDOR.MinimumWidth = 10;
-            VENDEDOR.Name = "VENDEDOR";
-            // 
-            // TELEFONO
-            // 
-            TELEFONO.HeaderText = "TELEFONO DE LA TIENDA";
-            TELEFONO.MinimumWidth = 10;
-            TELEFONO.Name = "TELEFONO";
-            // 
-            // DOMICILIO
-            // 
-            DOMICILIO.HeaderText = "DOMICILIO";
-            DOMICILIO.MinimumWidth = 10;
-            DOMICILIO.Name = "DOMICILIO";
-            // 
-            // ESTATUS
-            // 
-            ESTATUS.HeaderText = "ESTATUS DE COBRO";
-            ESTATUS.MinimumWidth = 10;
-            ESTATUS.Name = "ESTATUS";
-            // 
-            // IDTIENDA
-            // 
-            IDTIENDA.HeaderText = "ID DE TIENDA";
-            IDTIENDA.MinimumWidth = 10;
-            IDTIENDA.Name = "IDTIENDA";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "MONTO DE COBRO";
-            Column1.MinimumWidth = 10;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "DESCRIPCION";
-            Column2.MinimumWidth = 10;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "NOTAS";
-            Column3.MinimumWidth = 10;
-            Column3.Name = "Column3";
-            // 
-            // COLORRUTA
-            // 
-            COLORRUTA.HeaderText = "COLOR DE RUTA";
-            COLORRUTA.MinimumWidth = 10;
-            COLORRUTA.Name = "COLORRUTA";
-            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(192F, 192F);
@@ -362,6 +363,7 @@
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             MaximizeBox = false;
             Name = "Home";

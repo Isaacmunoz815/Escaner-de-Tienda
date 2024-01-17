@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrar_Cobrador));
             panel1 = new Panel();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -236,6 +237,7 @@
             Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Administrar_Cobrador";

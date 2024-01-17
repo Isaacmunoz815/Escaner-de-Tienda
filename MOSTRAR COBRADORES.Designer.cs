@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MOSTRAR_COBRADORES));
             panel1 = new Panel();
             label1 = new Label();
             dataGridView1 = new DataGridView();
@@ -113,6 +114,7 @@
             ClientSize = new Size(1437, 1244);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(6);
             MaximizeBox = false;
             MinimizeBox = false;

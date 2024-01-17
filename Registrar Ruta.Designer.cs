@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar_Ruta));
             textBox1 = new TextBox();
             button1 = new Button();
             panel1 = new Panel();
@@ -140,6 +141,7 @@
             Controls.Add(panel1);
             Controls.Add(button1);
             Controls.Add(textBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "Registrar_Ruta";
             Text = "Registrar_Ruta";

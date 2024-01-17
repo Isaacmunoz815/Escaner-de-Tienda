@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             panel1 = new Panel();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -171,6 +172,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Registrar";
             Text = "Registrar";
             Load += Registrar_Load;

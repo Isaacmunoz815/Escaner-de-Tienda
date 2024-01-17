@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrar_Tienda));
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -232,6 +233,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(flowLayoutPanel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "Administrar_Tienda";
             Text = "Administrar_Tienda";

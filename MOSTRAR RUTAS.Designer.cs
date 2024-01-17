@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MOSTRAR_RUTAS));
             panel1 = new Panel();
             label1 = new Label();
             dataGridView1 = new DataGridView();
@@ -109,6 +110,7 @@
             ClientSize = new Size(1330, 1030);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "MOSTRAR_RUTAS";
             Text = "MOSTRAR_RUTAS";

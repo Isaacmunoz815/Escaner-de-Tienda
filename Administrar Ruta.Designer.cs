@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrar_Ruta));
             label1 = new Label();
             panel1 = new Panel();
             button1 = new Button();
@@ -125,6 +126,7 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Administrar_Ruta";
             Text = "Administrar_Ruta";
             Load += Administrar_Ruta_Load;

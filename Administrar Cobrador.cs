@@ -39,7 +39,7 @@ namespace Escaner_de_Tienda
                 try
                 {
                     managment.Open();
-                 
+
                     string sql = "UPDATE ruta SET nombre_cobrador = '" + NOMBRE + "' WHERE(nombre_cobrador = '" + id + "')";
                     string sql1 = "UPDATE login SET nombre_cobrador = '" + NOMBRE + "', mail = '" + correo + "', password = '" + password + "' WHERE(nombre_cobrador = '" + id + "')";
                     string sql2 = "UPDATE cobrador SET nombre_cobrador = '" + NOMBRE + "', `mail` = '" + correo + "', `telefono` = '" + telefono + "', `birthdate` = '" + fecha_nacimiento + "' WHERE(nombre_cobrador = '" + id + "')";

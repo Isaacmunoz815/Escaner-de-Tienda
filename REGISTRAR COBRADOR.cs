@@ -57,11 +57,11 @@ namespace Escaner_de_Tienda
                         string checkduplicated = "SELECT * From cobrador WHERE mail = '" + textBox2.Text + "';";
                         MySqlCommand checkduplicated1 = new MySqlCommand(checkduplicated, registrar);
                         MySqlDataReader read = checkduplicated1.ExecuteReader();
-                        if(read.HasRows)
+                        if (read.HasRows)
                         {
                             MessageBox.Show("YA EXISTE UN COBRADOR CON ESE CORREO");
                             textBox1.Text = "";
-                            textBox2.Text = ""; 
+                            textBox2.Text = "";
                             textBox3.Text = "";
                             textBox4.Text = "";
                             read.Close();
