@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             label1 = new Label();
             panel1 = new Panel();
-            button12 = new Button();
             dataGridView1 = new DataGridView();
             VENDEDOR = new DataGridViewTextBoxColumn();
             TELEFONO = new DataGridViewTextBoxColumn();
@@ -83,7 +82,6 @@
             // 
             panel1.AutoSize = true;
             panel1.BackColor = Color.Purple;
-            panel1.Controls.Add(button12);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -91,18 +89,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(2254, 1118);
             panel1.TabIndex = 1;
-            // 
-            // button12
-            // 
-            button12.BackColor = Color.Purple;
-            button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(1248, 37);
-            button12.Name = "button12";
-            button12.Size = new Size(297, 110);
-            button12.TabIndex = 1;
-            button12.Text = "CERRAR SESION";
-            button12.UseVisualStyleBackColor = false;
-            button12.Click += button12_Click;
             // 
             // dataGridView1
             // 
@@ -367,7 +353,7 @@
             Margin = new Padding(4, 2, 4, 2);
             MaximizeBox = false;
             Name = "Home";
-            Text = "Home";
+            Text = "PAGINA PRINCIPAL";
             WindowState = FormWindowState.Maximized;
             Load += Home_Load;
             panel1.ResumeLayout(false);
