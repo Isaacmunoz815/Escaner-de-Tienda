@@ -1,0 +1,1 @@
+UPDATE escanerTienda.tienda SET estatus_cobro = 'pendiente', monto_cobro = NULL, descripcion = NULL, notas = NULL;
