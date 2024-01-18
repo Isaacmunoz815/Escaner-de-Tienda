@@ -15,7 +15,7 @@ namespace Escaner_de_Tienda
             {
                 home.Open();
 
-                string sql = "SELECT * FROM tienda ORDER BY color_ruta DESC, id_tienda ASC;";
+                string sql = "SELECT * FROM tienda ORDER BY id_tienda;";
                 MySqlCommand cmd = new MySqlCommand(sql, home);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
@@ -127,7 +127,7 @@ namespace Escaner_de_Tienda
             {
                 home.Open();
 
-                string sql = "SELECT * FROM escanerTienda.tienda ORDER BY color_ruta;";
+                string sql = "SELECT * FROM escanerTienda.tienda ORDER BY id_tienda;";
                 MySqlCommand cmd = new MySqlCommand(sql, home);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 

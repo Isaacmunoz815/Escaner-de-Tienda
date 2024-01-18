@@ -13,13 +13,9 @@ namespace Escaner_de_Tienda
         {
             string colorruta = textBox6.Text;
 
-            if (textBox2.Text == "")
-            {
-                MessageBox.Show("POR FAVOR, ESCRIBE EL ORIGEN DE LA RUTA");
-            }
             if (textBox3.Text == "")
             {
-                MessageBox.Show("POR FAVOR, ESCRIBE EL DESTINO DE LA RUTA");
+                MessageBox.Show("POR FAVOR, ESCRIBE EL VENDEDOR DE LA TIENDA");
             }
             else
             {
@@ -29,7 +25,7 @@ namespace Escaner_de_Tienda
                 {
                     login.Open();
                     string checkroute = "SELECT * FROM ruta WHERE color_ruta = '" + colorruta + "';";
-                    string sqlregistrar = "INSERT INTO tienda (`id_tienda`, `nombre`, `vendedor`, `telefono_tienda`, `domicilio`, `estatus_cobro`, `color_ruta`,`monto_cobro`) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', 'PENDIENTE', '" + textBox6.Text + "', '0')";
+                    string sqlregistrar = "INSERT INTO tienda (`id_tienda`, `vendedor`, `telefono_tienda`, `domicilio`, `estatus_cobro`, `color_ruta`,`monto_cobro`) VALUES('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "', '" + textBox5.Text + "', 'PENDIENTE', '" + textBox6.Text + "', '0')";
                     MySqlCommand checarruta = new MySqlCommand(checkroute, login);
                     MySqlCommand registro = new MySqlCommand(sqlregistrar, login);
 
@@ -39,6 +35,11 @@ namespace Escaner_de_Tienda
                         leerruta.Close();
                         registro.ExecuteNonQuery();
                         MessageBox.Show("TIENDA REGISTRADA");
+                        textBox1.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
 
                     }
                     else

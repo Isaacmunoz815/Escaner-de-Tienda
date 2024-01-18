@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar_Tienda));
-            textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             panel1 = new Panel();
             label7 = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -48,17 +46,9 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(316, 288);
-            textBox2.Margin = new Padding(4, 2, 4, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(736, 39);
-            textBox2.TabIndex = 1;
-            // 
             // textBox3
             // 
-            textBox3.Location = new Point(316, 369);
+            textBox3.Location = new Point(320, 294);
             textBox3.Margin = new Padding(4, 2, 4, 2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(736, 39);
@@ -66,7 +56,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(318, 459);
+            textBox4.Location = new Point(322, 384);
             textBox4.Margin = new Padding(4, 2, 4, 2);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(736, 39);
@@ -74,7 +64,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(320, 553);
+            textBox5.Location = new Point(324, 478);
             textBox5.Margin = new Padding(4, 2, 4, 2);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(736, 39);
@@ -82,7 +72,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(320, 640);
+            textBox6.Location = new Point(324, 565);
             textBox6.Margin = new Padding(4, 2, 4, 2);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(738, 39);
@@ -110,20 +100,10 @@
             label7.TabIndex = 0;
             label7.Text = "REGISTRAR TEINDA";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(43, 288);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 32);
-            label2.TabIndex = 8;
-            label2.Text = "NOMBRE";
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(43, 372);
+            label3.Location = new Point(47, 297);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(137, 32);
@@ -133,7 +113,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(49, 468);
+            label4.Location = new Point(53, 393);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(128, 32);
@@ -143,7 +123,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(49, 553);
+            label5.Location = new Point(53, 478);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(133, 32);
@@ -153,7 +133,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(49, 640);
+            label6.Location = new Point(53, 565);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(187, 32);
@@ -162,7 +142,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(478, 724);
+            button1.Location = new Point(482, 649);
             button1.Margin = new Padding(4, 2, 4, 2);
             button1.Name = "button1";
             button1.Size = new Size(150, 47);
@@ -193,7 +173,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1122, 818);
+            ClientSize = new Size(1122, 727);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -201,13 +181,11 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "Registrar_Tienda";
@@ -220,13 +198,11 @@
         }
 
         #endregion
-        private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
         private Panel panel1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;

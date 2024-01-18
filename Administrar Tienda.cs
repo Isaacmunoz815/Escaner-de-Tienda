@@ -12,10 +12,11 @@ namespace Escaner_de_Tienda
         private void button1_Click(object sender, EventArgs e)
         {
             string nombre = textBox1.Text;
+            string ruta = textBox5.Text;
 
-            if (textBox1.Text == "")
+            if (textBox1.Text == "" & textBox5.Text == "")
             {
-                MessageBox.Show("ESCRIBE EL COLOR DE RUTA");
+                MessageBox.Show("ESCRIBE EL COLOR Y NUMERO DE TIENDA DE RUTA");
             }
             else
             {
@@ -24,7 +25,7 @@ namespace Escaner_de_Tienda
                 try
                 {
                     managment.Open();
-                    string sql = "SELECT * FROM tienda WHERE id_tienda= '" + nombre + "';";
+                    string sql = "SELECT * FROM tienda WHERE id_tienda= '" + nombre + "' AND color_ruta= '" + ruta + "'";
                     MySqlCommand comandologin = new MySqlCommand(sql, managment);
                     MySqlDataReader lectura = comandologin.ExecuteReader();
                     if (lectura.HasRows)
@@ -34,8 +35,8 @@ namespace Escaner_de_Tienda
                             textBox2.Text = lectura.GetString(0);
                             textBox3.Text = lectura.GetString(1);
                             textBox4.Text = lectura.GetString(2);
-                            textBox5.Text = lectura.GetString(6);
                             textBox6.Text = lectura.GetString(4);
+                            textBox7.Text = lectura.GetString(6);
                         }
                         lectura.Close();
 
