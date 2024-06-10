@@ -19,13 +19,13 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection login = new MySqlConnection(database);
                 try
                 {
                     login.Open();
                     string checkroute = "SELECT * FROM ruta WHERE color_ruta = '" + colorruta + "';";
-                    string sqlregistrar = "INSERT INTO tienda (`id_tienda`, `vendedor`, `telefono_tienda`, `domicilio`, `estatus_cobro`, `color_ruta`,`monto_cobro`) VALUES('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "', '" + textBox5.Text + "', 'PENDIENTE', '" + textBox6.Text + "', '0')";
+                    string sqlregistrar = "INSERT INTO tienda (`id_tienda`, `vendedor`, `telefono_tienda`, `domicilio`, `estatus_cobro`, `color_ruta`,`dia`,`monto_cobro`) VALUES('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "', '" + textBox5.Text + "', 'PENDIENTE', '" + textBox6.Text + "','" + textBox2.Text + "', '0')";
                     MySqlCommand checarruta = new MySqlCommand(checkroute, login);
                     MySqlCommand registro = new MySqlCommand(sqlregistrar, login);
 

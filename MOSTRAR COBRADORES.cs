@@ -7,7 +7,7 @@ namespace Escaner_de_Tienda
         public MOSTRAR_COBRADORES()
         {
             InitializeComponent();
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection home = new MySqlConnection(database);
 
             try

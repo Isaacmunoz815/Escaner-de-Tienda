@@ -20,7 +20,7 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
@@ -37,6 +37,7 @@ namespace Escaner_de_Tienda
                             textBox4.Text = lectura.GetString(2);
                             textBox6.Text = lectura.GetString(4);
                             textBox7.Text = lectura.GetString(6);
+                            textBox8.Text = lectura.GetString(7);
                         }
                         lectura.Close();
 
@@ -66,7 +67,7 @@ namespace Escaner_de_Tienda
             string ruta = textBox5.Text;
             string idtienda = textBox6.Text;
 
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection managment = new MySqlConnection(database);
             string sql1 = "SELECT * FROM ruta WHERE color_ruta= '" + ruta + "';";
             MySqlCommand comandoruta = new MySqlCommand(sql1, managment);
@@ -110,6 +111,7 @@ namespace Escaner_de_Tienda
                         textBox4.Text = "";
                         textBox5.Text = "";
                         textBox6.Text = "";
+                        textBox8.Text = "";
 
                     }
                     else
@@ -139,7 +141,7 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
@@ -161,6 +163,11 @@ namespace Escaner_de_Tienda
                 }
                 managment.Close();
             }
+        }
+
+        private void Administrar_Tienda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

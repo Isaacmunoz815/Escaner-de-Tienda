@@ -20,14 +20,17 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
                     managment.Open();
                     string sql = "UPDATE ruta SET `nombre_cobrador` = '" + contraseña + "' WHERE(`color_ruta` = '" + correo + "')";
+                    string sql1 = "UPDATE tienda SET `vendedor` = '" + contraseña + "' WHERE(`color_ruta` = '" + correo + "')";
                     MySqlCommand comandologin = new MySqlCommand(sql, managment);
+                    MySqlCommand comandologin1 = new MySqlCommand(sql1, managment);
                     comandologin.ExecuteNonQuery();
+                    comandologin1.ExecuteNonQuery();
                     MessageBox.Show("RUTA ACTUALIZADA");
                     textBox1.Text = "";
                     textBox2.Text = "";
@@ -49,46 +52,57 @@ namespace Escaner_de_Tienda
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string correo = textBox1.Text;
-            string contraseña = textBox2.Text;
+            string colorRuta = textBox1.Text;
 
-            if (textBox1.Text == "")
+            if (colorRuta == "")
             {
-                MessageBox.Show("ESCRIBE EL COLOR DE RUTA");
+                MessageBox.Show("Escribe el color de ruta");
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
-                MySqlConnection managment = new MySqlConnection(database);
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                MySqlConnection connection = new MySqlConnection(database);
+
                 try
                 {
-                    managment.Open();
-                    string sql = "SELECT * FROM ruta WHERE color_ruta= '" + correo + "';";
-                    MySqlCommand comandologin = new MySqlCommand(sql, managment);
-                    MySqlDataReader lectura = comandologin.ExecuteReader();
-                    if (lectura.HasRows)
+                    connection.Open();
+                    string sql = "SELECT DISTINCT nombre_cobrador FROM ruta WHERE color_ruta = @colorRuta";
+                    MySqlCommand command = new MySqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("@colorRuta", colorRuta);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        while (lectura.Read())
+                        if (reader.HasRows)
                         {
-                            textBox2.Text = lectura.GetString(1);
+                            reader.Read(); // Solo necesitamos la primera fila
+                            string nombreCobrador = reader["nombre_cobrador"].ToString();
+
+                            // Mostrar el nombre del cobrador en el TextBox
+                            textBox2.Text = nombreCobrador;
+                            button1.Enabled = true;
                         }
-                        button1.Enabled = true;
-
+                        else
+                        {
+                            MessageBox.Show("No se encontraron días para el color de ruta proporcionado.");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("NO EXISTE EL USUARIO");
-
-
-                    }
-                    lectura.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error al buscar días: " + ex.Message);
                 }
-                managment.Close();
+                finally
+                {
+                    connection.Close();
+                }
             }
+        }
+
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

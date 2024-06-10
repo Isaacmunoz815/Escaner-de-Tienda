@@ -7,7 +7,7 @@ namespace Escaner_de_Tienda
         public MOSTRAR_RUTAS()
         {
             InitializeComponent();
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection home = new MySqlConnection(database);
 
             try
@@ -26,8 +26,6 @@ namespace Escaner_de_Tienda
                         dataGridView1.Rows[n].Cells[0].Value = rdr.GetString(0);
                         dataGridView1.Rows[n].Cells[1].Value = rdr.GetString(1);
                         dataGridView1.Rows[n].Cells[2].Value = rdr.GetString(2);
-                        dataGridView1.Rows[n].Cells[3].Value = rdr.GetString(3);
-                        dataGridView1.Rows[n].Cells[4].Value = rdr.GetString(4);
                     }
                 }
                 else
@@ -50,6 +48,11 @@ namespace Escaner_de_Tienda
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

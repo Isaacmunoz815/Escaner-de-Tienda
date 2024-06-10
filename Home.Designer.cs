@@ -31,22 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             label1 = new Label();
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
-            groupBox1 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            groupBox2 = new GroupBox();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
             groupBox4 = new GroupBox();
             button10 = new Button();
             button11 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            saveFileDialog1 = new SaveFileDialog();
+            dataGridView1 = new DataGridView();
             VENDEDOR = new DataGridViewTextBoxColumn();
             TELEFONO = new DataGridViewTextBoxColumn();
             DOMICILIO = new DataGridViewTextBoxColumn();
@@ -56,11 +44,23 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             COLORRUTA = new DataGridViewTextBoxColumn();
+            groupBox1 = new GroupBox();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            groupBox2 = new GroupBox();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             panel1.SuspendLayout();
+            groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -70,10 +70,10 @@
             label1.BackColor = Color.Purple;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(411, 33);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(206, 16);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(768, 86);
+            label1.Size = new Size(387, 45);
             label1.TabIndex = 0;
             label1.Text = "ESTATUS DE LAS TIENDAS";
             label1.Click += label1_Click;
@@ -83,131 +83,14 @@
             panel1.AutoSize = true;
             panel1.BackColor = Color.Purple;
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(groupBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 2, 4, 2);
+            panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(2254, 1118);
+            panel1.Size = new Size(994, 551);
             panel1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { VENDEDOR, TELEFONO, DOMICILIO, ESTATUS, IDTIENDA, Column1, Column2, Column3, COLORRUTA });
-            dataGridView1.Location = new Point(422, 292);
-            dataGridView1.Margin = new Padding(4, 2, 4, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1792, 800);
-            dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.Purple;
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
-            groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(26, 166);
-            groupBox1.Margin = new Padding(4, 2, 4, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 2, 4, 2);
-            groupBox1.Size = new Size(336, 318);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "RUTA";
-            // 
-            // button3
-            // 
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(39, 222);
-            button3.Margin = new Padding(4, 2, 4, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(277, 47);
-            button3.TabIndex = 2;
-            button3.Text = "MOSTRAR RUTAS";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click_1;
-            // 
-            // button2
-            // 
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(33, 126);
-            button2.Margin = new Padding(4, 2, 4, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(282, 62);
-            button2.TabIndex = 1;
-            button2.Text = "ADMINISTRAR RUTA";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(33, 45);
-            button1.Margin = new Padding(4, 2, 4, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(282, 62);
-            button1.TabIndex = 0;
-            button1.Text = "REGISTRAR RUTA";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.Purple;
-            groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(button4);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(26, 489);
-            groupBox2.Margin = new Padding(4, 2, 4, 2);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4, 2, 4, 2);
-            groupBox2.Size = new Size(336, 361);
-            groupBox2.TabIndex = 4;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "COBRADOR";
-            // 
-            // button6
-            // 
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(33, 254);
-            button6.Margin = new Padding(4, 2, 4, 2);
-            button6.Name = "button6";
-            button6.Size = new Size(277, 83);
-            button6.TabIndex = 3;
-            button6.Text = "MOSTRAR COBRADORES";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
-            // 
-            // button5
-            // 
-            button5.ForeColor = Color.Black;
-            button5.Location = new Point(28, 149);
-            button5.Margin = new Padding(4, 2, 4, 2);
-            button5.Name = "button5";
-            button5.Size = new Size(282, 77);
-            button5.TabIndex = 3;
-            button5.Text = "ADMINISTRAR COBRADOR";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(28, 62);
-            button4.Margin = new Padding(4, 2, 4, 2);
-            button4.Name = "button4";
-            button4.Size = new Size(282, 62);
-            button4.TabIndex = 2;
-            button4.Text = "REGISTRAR COBRADOR";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            panel1.Paint += panel1_Paint;
             // 
             // groupBox4
             // 
@@ -215,11 +98,11 @@
             groupBox4.Controls.Add(button10);
             groupBox4.Controls.Add(button11);
             groupBox4.ForeColor = Color.White;
-            groupBox4.Location = new Point(26, 870);
-            groupBox4.Margin = new Padding(4, 2, 4, 2);
+            groupBox4.Location = new Point(13, 426);
+            groupBox4.Margin = new Padding(2, 1, 2, 1);
             groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(4, 2, 4, 2);
-            groupBox4.Size = new Size(336, 239);
+            groupBox4.Padding = new Padding(2, 1, 2, 1);
+            groupBox4.Size = new Size(168, 120);
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "TIENDA";
@@ -227,10 +110,10 @@
             // button10
             // 
             button10.ForeColor = Color.Black;
-            button10.Location = new Point(33, 156);
-            button10.Margin = new Padding(4, 2, 4, 2);
+            button10.Location = new Point(16, 78);
+            button10.Margin = new Padding(2, 1, 2, 1);
             button10.Name = "button10";
-            button10.Size = new Size(282, 62);
+            button10.Size = new Size(141, 31);
             button10.TabIndex = 3;
             button10.Text = "ADMINISTRAR TIENDA";
             button10.UseVisualStyleBackColor = true;
@@ -239,47 +122,29 @@
             // button11
             // 
             button11.ForeColor = Color.Black;
-            button11.Location = new Point(33, 64);
-            button11.Margin = new Padding(4, 2, 4, 2);
+            button11.Location = new Point(16, 32);
+            button11.Margin = new Padding(2, 1, 2, 1);
             button11.Name = "button11";
-            button11.Size = new Size(282, 62);
+            button11.Size = new Size(141, 31);
             button11.TabIndex = 2;
             button11.Text = "REGISTRAR TIENDA";
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
             // 
-            // button7
+            // dataGridView1
             // 
-            button7.Location = new Point(422, 183);
-            button7.Margin = new Padding(4, 2, 4, 2);
-            button7.Name = "button7";
-            button7.Size = new Size(332, 81);
-            button7.TabIndex = 6;
-            button7.Text = "CAMBIAR A PENDIENTE";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.Location = new Point(787, 183);
-            button8.Margin = new Padding(4, 2, 4, 2);
-            button8.Name = "button8";
-            button8.Size = new Size(422, 81);
-            button8.TabIndex = 7;
-            button8.Text = "EXPORTAR A EXCEL";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
-            // 
-            // button9
-            // 
-            button9.Location = new Point(1237, 183);
-            button9.Margin = new Padding(4, 2, 4, 2);
-            button9.Name = "button9";
-            button9.Size = new Size(308, 81);
-            button9.TabIndex = 8;
-            button9.Text = "RECARGAR TABLA";
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { VENDEDOR, TELEFONO, DOMICILIO, ESTATUS, IDTIENDA, Column1, Column2, Column3, COLORRUTA });
+            dataGridView1.Location = new Point(211, 146);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.RowTemplate.Height = 41;
+            dataGridView1.Size = new Size(772, 395);
+            dataGridView1.TabIndex = 2;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // VENDEDOR
             // 
@@ -335,22 +200,157 @@
             COLORRUTA.MinimumWidth = 10;
             COLORRUTA.Name = "COLORRUTA";
             // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.Purple;
+            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button1);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(13, 83);
+            groupBox1.Margin = new Padding(2, 1, 2, 1);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(2, 1, 2, 1);
+            groupBox1.Size = new Size(168, 159);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "RUTA";
+            // 
+            // button3
+            // 
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(20, 111);
+            button3.Margin = new Padding(2, 1, 2, 1);
+            button3.Name = "button3";
+            button3.Size = new Size(138, 24);
+            button3.TabIndex = 2;
+            button3.Text = "MOSTRAR RUTAS";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
+            // 
+            // button2
+            // 
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(16, 63);
+            button2.Margin = new Padding(2, 1, 2, 1);
+            button2.Name = "button2";
+            button2.Size = new Size(141, 31);
+            button2.TabIndex = 1;
+            button2.Text = "ADMINISTRAR RUTA";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(16, 22);
+            button1.Margin = new Padding(2, 1, 2, 1);
+            button1.Name = "button1";
+            button1.Size = new Size(141, 31);
+            button1.TabIndex = 0;
+            button1.Text = "REGISTRAR RUTA";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.Purple;
+            groupBox2.Controls.Add(button6);
+            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(button4);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(13, 244);
+            groupBox2.Margin = new Padding(2, 1, 2, 1);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(2, 1, 2, 1);
+            groupBox2.Size = new Size(168, 180);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "COBRADOR";
+            // 
+            // button6
+            // 
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(16, 127);
+            button6.Margin = new Padding(2, 1, 2, 1);
+            button6.Name = "button6";
+            button6.Size = new Size(138, 42);
+            button6.TabIndex = 3;
+            button6.Text = "MOSTRAR COBRADORES";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button5
+            // 
+            button5.ForeColor = Color.Black;
+            button5.Location = new Point(14, 74);
+            button5.Margin = new Padding(2, 1, 2, 1);
+            button5.Name = "button5";
+            button5.Size = new Size(141, 38);
+            button5.TabIndex = 3;
+            button5.Text = "ADMINISTRAR COBRADOR";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button4
+            // 
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(14, 31);
+            button4.Margin = new Padding(2, 1, 2, 1);
+            button4.Name = "button4";
+            button4.Size = new Size(141, 31);
+            button4.TabIndex = 2;
+            button4.Text = "REGISTRAR COBRADOR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(211, 92);
+            button7.Margin = new Padding(2, 1, 2, 1);
+            button7.Name = "button7";
+            button7.Size = new Size(166, 40);
+            button7.TabIndex = 6;
+            button7.Text = "CAMBIAR A PENDIENTE";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(394, 92);
+            button8.Margin = new Padding(2, 1, 2, 1);
+            button8.Name = "button8";
+            button8.Size = new Size(211, 40);
+            button8.TabIndex = 7;
+            button8.Text = "EXPORTAR A EXCEL";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(618, 92);
+            button9.Margin = new Padding(2, 1, 2, 1);
+            button9.Name = "button9";
+            button9.Size = new Size(154, 40);
+            button9.TabIndex = 8;
+            button9.Text = "RECARGAR TABLA";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
             // Home
             // 
-            AutoScaleDimensions = new SizeF(192F, 192F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleMode = AutoScaleMode.None;
             AutoSize = true;
-            ClientSize = new Size(2254, 1118);
+            ClientSize = new Size(994, 551);
             Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
-            Controls.Add(groupBox4);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             MaximizeBox = false;
             Name = "Home";
             Text = "PAGINA PRINCIPAL";
@@ -358,10 +358,10 @@
             Load += Home_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }

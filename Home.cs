@@ -7,7 +7,7 @@ namespace Escaner_de_Tienda
         public Home()
         {
             InitializeComponent();
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection home = new MySqlConnection(database);
             dataGridView1.Refresh();
 
@@ -67,7 +67,11 @@ namespace Escaner_de_Tienda
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            this.Location = new Point(0, 0);
+            int taskbarHeight = Screen.PrimaryScreen.Bounds.Height - Screen.PrimaryScreen.WorkingArea.Height;
+            this.MaximizeBox = true;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,7 +124,7 @@ namespace Escaner_de_Tienda
         private void button9_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection home = new MySqlConnection(database);
 
             try
@@ -163,7 +167,7 @@ namespace Escaner_de_Tienda
         private void button7_Click(object sender, EventArgs e)
         {
 
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection home = new MySqlConnection(database);
             home.Open();
 
@@ -175,7 +179,7 @@ namespace Escaner_de_Tienda
                 string id = filaSeleccionada.Cells["IDTIENDA"].Value.ToString();
 
                 // Crea la consulta SQL para actualizar la base de datos
-                string query = $"UPDATE tienda SET estatus_cobro = 'pendiente', monto_cobro = NULL WHERE id_tienda = {id}";
+                string query = $"UPDATE tienda SET estatus_cobro = 'pendiente', monto_cobro = NULL, descripcion=NULL, notas=NULL WHERE id_tienda = {id}";
 
                 // Ejecuta la consulta SQL
                 MySqlCommand cmd = new MySqlCommand(query, home);
@@ -238,6 +242,11 @@ namespace Escaner_de_Tienda
                     }
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

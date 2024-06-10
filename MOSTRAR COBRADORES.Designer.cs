@@ -46,9 +46,8 @@
             panel1.BackColor = Color.Tomato;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1443, 147);
+            panel1.Size = new Size(777, 54);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -56,10 +55,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(451, 58);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(259, 9);
             label1.Name = "label1";
-            label1.Size = new Size(512, 65);
+            label1.Size = new Size(254, 32);
             label1.TabIndex = 0;
             label1.Text = "MOSTRAR COBRADOR";
             // 
@@ -68,12 +66,11 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(32, 179);
-            dataGridView1.Margin = new Padding(6);
+            dataGridView1.Location = new Point(17, 74);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1384, 1039);
+            dataGridView1.Size = new Size(745, 401);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -109,13 +106,12 @@
             // 
             // MOSTRAR_COBRADORES
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1437, 1244);
+            ClientSize = new Size(774, 497);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(6);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MOSTRAR_COBRADORES";

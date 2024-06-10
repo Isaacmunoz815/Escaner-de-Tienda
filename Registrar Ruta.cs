@@ -27,10 +27,6 @@ namespace Escaner_de_Tienda
                 {
                     MessageBox.Show("POR FAVOR, ESCRIBE EL COBRADOR QUE QUIERES ASIGNAR");
                 }
-                if (textBox2.Text == "")
-                {
-                    MessageBox.Show("POR FAVOR, ESCRIBE EL DIA DE LA RUTA");
-                }
                 if (textBox4.Text == "")
                 {
                     MessageBox.Show("POR FAVOR, ESCRIBE EL COLOR DE LA RUTA");
@@ -38,14 +34,14 @@ namespace Escaner_de_Tienda
                 else
                 {
                     Home home = new Home();
-                    string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                    string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                     MySqlConnection login = new MySqlConnection(database);
                     MySqlConnection registrar = new MySqlConnection(database);
                     try
                     {
                         login.Open();
                         registrar.Open();
-                        string sqlregistrar = "INSERT INTO ruta (`nombre_cobrador`, `dia`,`color_ruta`) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "','" + textBox4.Text + "')";
+                        string sqlregistrar = "INSERT INTO ruta (`nombre_cobrador`,`color_ruta`) VALUES ('" + textBox1.Text + "', '" + textBox4.Text + "')";
                         MySqlCommand registro = new MySqlCommand(sqlregistrar, registrar);
                         registro.ExecuteNonQuery();
                         MessageBox.Show("RUTA REGISTRADA");

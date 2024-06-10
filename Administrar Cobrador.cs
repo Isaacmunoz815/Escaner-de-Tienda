@@ -24,7 +24,7 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
@@ -71,7 +71,7 @@ namespace Escaner_de_Tienda
             }
             else
             {
-                string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                 MySqlConnection managment = new MySqlConnection(database);
                 try
                 {
@@ -132,7 +132,7 @@ namespace Escaner_de_Tienda
 
             string sql = "SELECT * FROM ruta WHERE nombre_cobrador= '" + id + "';";
 
-            string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+            string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
             MySqlConnection managment = new MySqlConnection(database);
             MySqlCommand comandologin = new MySqlCommand(sql, managment);
             managment.Open();

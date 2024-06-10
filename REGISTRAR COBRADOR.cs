@@ -36,7 +36,7 @@ namespace Escaner_de_Tienda
                 else
                 {
                     Home home = new Home();
-                    string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                    string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                     MySqlConnection login = new MySqlConnection(database);
                     MySqlConnection registrar = new MySqlConnection(database);
                     try
@@ -44,7 +44,7 @@ namespace Escaner_de_Tienda
                         login.Open();
                         registrar.Open();
                         string sqlregistrar = "INSERT INTO cobrador (`nombre_cobrador`, `mail`, `telefono`, `birthdate`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
-                        string sqlregistrar1 = "INSERT INTO login (`nombre_cobrador`, `mail`, `password`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox5.Text + "')";
+                        string sqlregistrar1 = "INSERT INTO logiin (`nombre_cobrador`, `mail`, `passwords`) VALUES('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox5.Text + "')";
                         string checkduplicated = "SELECT * From cobrador WHERE mail = '" + textBox2.Text + "';";
                         MySqlCommand checkduplicated1 = new MySqlCommand(checkduplicated, registrar);
                         MySqlDataReader read = checkduplicated1.ExecuteReader();
@@ -55,6 +55,7 @@ namespace Escaner_de_Tienda
                             textBox2.Text = "";
                             textBox3.Text = "";
                             textBox4.Text = "";
+                            textBox5.Text = "";
                             read.Close();
 
                         }
@@ -66,6 +67,11 @@ namespace Escaner_de_Tienda
                             registro.ExecuteNonQuery();
                             registro1.ExecuteNonQuery();
                             MessageBox.Show("COBRADOR REGISTRADO");
+                            textBox1.Text = "";
+                            textBox2.Text = "";
+                            textBox3.Text = "";
+                            textBox4.Text = "";
+
                         }
                         registrar.Close();
                         login.Close();

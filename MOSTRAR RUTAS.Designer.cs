@@ -34,7 +34,6 @@
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            DIA = new DataGridViewTextBoxColumn();
             COLORRUTA = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -45,10 +44,11 @@
             panel1.BackColor = Color.Goldenrod;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 2, 4, 2);
+            panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1330, 99);
+            panel1.Size = new Size(716, 46);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -56,10 +56,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.125F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(487, 21);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(262, 10);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(338, 59);
+            label1.Size = new Size(172, 30);
             label1.TabIndex = 0;
             label1.Text = "MOSTRAR RUTA";
             // 
@@ -69,13 +69,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, DIA, COLORRUTA });
-            dataGridView1.Location = new Point(24, 119);
-            dataGridView1.Margin = new Padding(4, 2, 4, 2);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, COLORRUTA });
+            dataGridView1.Location = new Point(13, 56);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1272, 864);
+            dataGridView1.Size = new Size(685, 405);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -91,12 +91,6 @@
             Column2.MinimumWidth = 10;
             Column2.Name = "Column2";
             // 
-            // DIA
-            // 
-            DIA.HeaderText = "DIA";
-            DIA.MinimumWidth = 10;
-            DIA.Name = "DIA";
-            // 
             // COLORRUTA
             // 
             COLORRUTA.HeaderText = "COLOR DE RUTA";
@@ -105,13 +99,13 @@
             // 
             // MOSTRAR_RUTAS
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1330, 1030);
+            ClientSize = new Size(716, 483);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "MOSTRAR_RUTAS";
             Text = "MOSTRAR_RUTAS";
             Load += MOSTRAR_RUTAS_Load;
@@ -128,7 +122,6 @@
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn DIA;
         private DataGridViewTextBoxColumn COLORRUTA;
     }
 }

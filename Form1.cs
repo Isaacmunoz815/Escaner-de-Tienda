@@ -31,7 +31,7 @@ namespace Escaner_de_Tienda
                 else
                 {
                     Home home = new Home();
-                    string database = "server=208.109.68.135;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
+                    string database = "server=177.230.218.4;user=escanerTienda;database=escanerTienda;port=3306;password=Ferrari1";
                     MySqlConnection login = new MySqlConnection(database);
                     try
                     {
